@@ -4,6 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Controller\HomeController;
 use App\Entity\Autor;
+use App\Entity\AutorLibro;
+use App\Entity\CategoriaLibro;
 use App\Entity\Libro;
 use App\Entity\Usuario;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -80,6 +82,8 @@ class DashboardController extends AbstractDashboardController
         //yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home', HomeController::class);
         yield MenuItem::linkToCrud('Autor', 'fas fa-list', Autor::class);
         yield MenuItem::linkToCrud('Libro', 'fas fa-list', Libro::class);
+        yield MenuItem::linkToCrud('AutorLibro', 'fas fa-list', AutorLibro::class);
+        yield MenuItem::linkToCrud('Categoria', 'fas fa-list', CategoriaLibro::class);
         yield MenuItem::linkToCrud('Usuario', 'fas fa-list', Usuario::class);
     }
 }

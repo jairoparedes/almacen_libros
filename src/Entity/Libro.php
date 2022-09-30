@@ -29,6 +29,12 @@ class Libro
     #[ORM\Column(length: 255)]
     private ?string $portada = null;
 
+    #[ORM\Column]
+    private ?int $categoria = null;
+
+    #[ORM\ManyToOne(inversedBy: 'cat')]
+    private ?CategoriaLibro $categoria_relacion = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +96,30 @@ class Libro
     public function setPortada(string $portada): self
     {
         $this->portada = $portada;
+
+        return $this;
+    }
+
+    public function getCategoria(): ?int
+    {
+        return $this->categoria;
+    }
+
+    public function setCategoria(int $categoria): self
+    {
+        $this->categoria = $categoria;
+
+        return $this;
+    }
+
+    public function getCategoriaRelacion(): ?CategoriaLibro
+    {
+        return $this->categoria_relacion;
+    }
+
+    public function setCategoriaRelacion(?CategoriaLibro $categoria_relacion): self
+    {
+        $this->categoria_relacion = $categoria_relacion;
 
         return $this;
     }
