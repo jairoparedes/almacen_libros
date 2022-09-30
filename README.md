@@ -2,7 +2,7 @@
 
 Link de acceso a la Prueba: http://almacen-libros.ddns.net/
 
-desde este link podra ingresar a revisar la prueba solicitada.
+desde este link podra ingresar a revisar la prueba solicitada (Servidor privado).
 
 Proyecto realizado con:
 
